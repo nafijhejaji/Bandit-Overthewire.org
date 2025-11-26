@@ -23,8 +23,6 @@ Works perfectly with GitHub’s Markdown renderer (no external styling required)
 - [Overview](#overview)
 - [How to use this guide](#how-to-use-this-guide)
 - [Conventions](#conventions)
-- [Levels](#levels)
-  - [Bandit Level 2 → Level 3](#bandit-level-2--level-3)
 - [Tips](#tips)
 
 ---
@@ -68,5 +66,7 @@ Find the password stored inside:
 ```bash
 bandit2@bandit:~$ ls -la
 bandit2@bandit:~$ cat ./"--spaces in this filename--"
+
+
 
 
