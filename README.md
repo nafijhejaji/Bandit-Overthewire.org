@@ -50,6 +50,7 @@ This repo documents each Bandit level with the goal, the pitfall, the correct co
 ## Levels
 
 
+
 ## 🔐 Bandit Level 0 → Level 1
 
 ### 🎯 Level Goal
@@ -69,7 +70,7 @@ bandit0
 
 
 
-## **🔐 Bandit Level 1 → Level 2**
+
 
 ## 🔐 Bandit Level 1 → Level 2
 
@@ -93,6 +94,11 @@ Read the file using a path:
 ```bash
 cat ./-
 ```
+🔑 Password for Next Level
+```bash
+263JGJPfgU6LtdEvgfWU1XP5yac29mFx
+```
+
 
 
 ### Bandit Level 2 → Level 3
@@ -113,6 +119,42 @@ Find the password stored inside:
 bandit2@bandit:~$ ls -la
 bandit2@bandit:~$ cat ./"--spaces in this filename--"
 ```
+
+🔑 Password for Next Level
+```bash
+MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
+```
+
+
+
+
+
+---
+
+## 🔐 Bandit Level 3 → Level 4
+
+### 🎯 Level Goal
+Find a hidden file inside the `inhere` directory.
+
+---
+
+### 📝 Commands I Used
+Navigate to the directory:
+```bash
+cd inhere
+```
+List hidden files:
+```bash
+ls -la
+```
+
+Read the file:
+```bash
+cat ...Hiding-From-You
+```
+## important note (The hiddend files start with "." (dot))
+
+
 
 
 
