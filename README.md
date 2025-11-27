@@ -66,6 +66,8 @@ Find the password stored inside:
 ```bash
 bandit2@bandit:~$ ls -la
 bandit2@bandit:~$ cat ./"--spaces in this filename--"
+```bash
+
 
 
 
