@@ -68,10 +68,9 @@ bandit0
 ```
 
 
----
 
 ## **🔐 Bandit Level 1 → Level 2**
-```md
+
 ## 🔐 Bandit Level 1 → Level 2
 
 ### 🎯 Level Goal
