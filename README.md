@@ -60,6 +60,8 @@ Use SSH to connect to the Bandit game.
 ### 📝 Commands I Used
 ```bash
 ssh bandit0@bandit.labs.overthewire.org -p 2220
+```
+
 🔑 Password for Next Level
 ```bash
 bandit0
@@ -86,6 +88,7 @@ Read the file named `-` inside the home directory.
 List files:
 ```bash
 ls -la
+```
 
 Read the file using a path:
 ```bash
