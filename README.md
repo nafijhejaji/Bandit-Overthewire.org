@@ -66,7 +66,7 @@ Find the password stored inside:
 ```bash
 bandit2@bandit:~$ ls -la
 bandit2@bandit:~$ cat ./"--spaces in this filename--"
-```bash
+```
 
 
 
@@ -104,6 +104,8 @@ We use the `find` command with multiple conditions to filter the correct file ba
 ```bash
 cd inhere
 find . -type f -size 1033c ! -executable
+
+```
 
 
 
