@@ -124,6 +124,11 @@ bandit2@bandit:~$ cat ./"--spaces in this filename--"
 ```bash
 MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
 ```
+## ✅ What I Learned
+
+How to handle filenames with spaces
+
+Using quotes " " to wrap multi-word filenames
 
 
 
@@ -150,17 +155,48 @@ ls -la
 
 Read the file:
 ```bash
-cat ...Hiding-From-You
+cat ./"...Hiding-From-You"
 ```
-## important note (The hiddend files start with "." (dot))
+## ✅ What I Learned
+
+Hidden files start with .
+
+ls -la shows everything
+
+
+---
 
 
 
 
+## 🔐 Bandit Level 4 → Level 5
 
+### 🎯 Level Goal
+Among many files, find the one that is **human-readable**.
 
+---
 
+### 📝 Commands I Used
 
+Identify file types:
+```bash
+file ./*
+```
+
+Read the ASCII text file:
+```bash
+cat ./"-file07"
+```
+🔑 Password for Next Level
+```bash
+4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
+```
+
+## ✅ What I Learned
+
+Using file to identify readable files
+
+ASCII text vs binary files
 
 
 
