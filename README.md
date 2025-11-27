@@ -70,3 +70,40 @@ bandit2@bandit:~$ cat ./"--spaces in this filename--"
 
 
 
+
+
+
+
+
+
+
+## 🔐 Bandit Level 5 → Level 6
+
+### 🎯 Level Goal
+Find the file inside the `inhere` directory that is:
+- a regular file  
+- human-readable  
+- **1033 bytes**  
+- **NOT executable**
+
+---
+
+### 🧠 Approach
+We use the `find` command with multiple conditions to filter the correct file based on:
+- file type  
+- size  
+- permissions  
+
+---
+
+### 📝 Commands I Used
+
+#### 1. Navigate into the directory:
+```bash
+cd inhere
+find . -type f -size 1033c ! -executable
+
+
+
+
+
