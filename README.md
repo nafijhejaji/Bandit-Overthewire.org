@@ -231,6 +231,23 @@ find . -type f -size 1033c ! -executable
 
 ```
 
+Read the file:
+```bash
+cat ./maybehere07/.file2
+```
+
+🔑 Password for Next Level
+```bash
+HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
+```
+
+## ✅ What I Learned
+
+Used find to locate files by size, type, and permissions, and learned to search efficiently in nested directories.
+
+
+
+
 
 
 
