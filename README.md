@@ -49,6 +49,50 @@ This repo documents each Bandit level with the goal, the pitfall, the correct co
 
 ## Levels
 
+
+## 🔐 Bandit Level 0 → Level 1
+
+### 🎯 Level Goal
+Use SSH to connect to the Bandit game.
+
+---
+
+### 📝 Commands I Used
+```bash
+ssh bandit0@bandit.labs.overthewire.org -p 2220
+🔑 Password for Next Level
+```bash
+bandit0
+```
+
+
+---
+
+## **🔐 Bandit Level 1 → Level 2**
+```md
+## 🔐 Bandit Level 1 → Level 2
+
+### 🎯 Level Goal
+Read the file named `-` inside the home directory.
+
+---
+
+### ❗ Challenge
+`cat -` does NOT work because `-` means **stdin** in Linux.
+
+---
+
+### 📝 Commands I Used
+List files:
+```bash
+ls -la
+
+Read the file using a path:
+```bash
+cat ./-
+```
+
+
 ### Bandit Level 2 → Level 3
 
 > Filename with spaces and leading `--` in the home directory.
