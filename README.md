@@ -246,6 +246,47 @@ HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
 Used find to locate files by size, type, and permissions, and learned to search efficiently in nested directories.
 
 
+## Bandit Level 6 → 7
+
+### 🎯 Task  
+Find a file owned by **user bandit7**, **group bandit6**, and exactly **33 bytes** in size.
+
+---
+
+### 🧠 What I Learned  
+- How to use the `find` command to locate files based on user, group, and size  
+- Meaning of `-type f` (regular file) and `33c` (33 bytes)
+
+---
+
+### 🛠️ Commands I Used  
+```bash
+find / -type f -user bandit7 -group bandit6 -size 33c 
+```
+📍 Found the password here
+```bash
+cat /var/lib/dpkg/info/bandit7.password
+```
+
+🔐 Password
+```bash
+morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
+```
+
+## ✅ What I Learned (Level 6 → 7)
+
+How to use find to locate files by user, group, type, and exact size.
+
+How to read system files and handle permission errors (2>/dev/null) efficiently.
+
+2> = redirect error output
+
+/dev/null = trash can
+
+2>/dev/null = hide errors
+
+Used with find, grep, cat, etc.
+
 
 
 
