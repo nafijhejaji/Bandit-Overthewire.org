@@ -261,7 +261,7 @@ Find a file owned by **user bandit7**, **group bandit6**, and exactly **33 bytes
 
 ### 🛠️ Commands I Used  
 ```bash
-find / -type f -user bandit7 -group bandit6 -size 33c 
+find / -type f -user bandit7 -group bandit6 -size 33c 2>/dev/null
 ```
 📍 Found the password here
 ```bash
