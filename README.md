@@ -290,6 +290,49 @@ Used with find, grep, cat, etc.
 
 
 
+## 🔐 Bandit Level 7 → 8
+
+### 🎯 Task  
+Search inside `data.txt` to find the password for the next level. The file contains many key-value pairs on separate lines.
+
+---
+
+### 🛠️ Commands I Used
+List files:
+```bash
+ls
+```
+
+Search for the keyword (Bandit provided keyword: millionth):
+```bash
+grep "millionth" data.txt
+```
+
+🔎 Output :
+```bash
+millionth	dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
+```
+
+
+The password is the value after the tab.
+
+🔐 Password for Level 8
+```bash
+dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
+```
+
+## ✅ What I Learned
+
+How to use "grep" to search inside files for exact text
+```bash
+<search-command> "text" data.txt
+```
+How to extract the needed data quickly from structured text files
+
+
+
+
+
 
 
 
