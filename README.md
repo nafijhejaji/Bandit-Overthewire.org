@@ -333,6 +333,25 @@ How to extract the needed data quickly from structured text files
 
 
 
+## 🔐 Bandit Level 8 → 9
+
+### 🎯 Task  
+The password for the next level is stored in `data.txt`, but the file contains **many lines**, and only one of them is unique.  
+All other lines are duplicates.
+
+---
+
+### 🛠️ Steps I Took  
+
+1. Viewed the file:
+```bash
+cat data.txt
+```
+
+
+
+
+
 
 
 
