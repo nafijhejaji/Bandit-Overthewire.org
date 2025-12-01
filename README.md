@@ -377,6 +377,45 @@ How uniq -u helps find a single unique line in a large file
 
 
 
+## 🔐 Bandit Level 9 → 10
+
+### 🎯 Task  
+The password for the next level is stored in `data.txt`, but the file contains **binary data**.  
+Reading it with `cat` shows unreadable characters, so it's not a plain text file.
+
+---
+
+### 🛠️ Steps I Took  
+
+1. Tried viewing the file:
+```bash
+cat data.txt
+```
+
+The output was full of random binary symbols.
+
+Used the strings command to extract only the human-readable text:
+```bash
+strings data.txt
+```
+
+Among the readable output, one line clearly contained the password.
+
+🔐 Password for Level 10
+```bash
+FGUW5 i 1LVJr×X9kMYMmIN4MgbpfMiqey
+```
+
+
+## ✅ What I Learned
+
+How to extract readable text from binary files using strings
+
+Why cat doesn’t work for binary data
+
+How password clues can be hidden inside non-text files
+
+Basic idea of analyzing unknown file types in Linux/CTFs
 
 
 
