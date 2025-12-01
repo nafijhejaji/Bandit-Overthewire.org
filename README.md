@@ -351,9 +351,9 @@ cat data.txt
 Needed to find the only unique line.
 
 Used sorting + unique flag:
-
+```bash
 sort data.txt | uniq -u
-
+```
 
 sort arranges lines in order
 
@@ -362,8 +362,8 @@ uniq -u prints only the lines that appear exactly once
 The output showed a single unique string — which is the password.
 
 🔐 Password for Level 9
-<your_password_here>
-
+```bash
+```
 
 (removed for public repo — optional)
 
