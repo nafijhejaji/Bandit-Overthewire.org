@@ -363,11 +363,11 @@ The output showed a single unique string — which is the password.
 
 🔐 Password for Level 9
 ```bash
+4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
 ```
 
-(removed for public repo — optional)
 
-✅ What I Learned
+## ✅ What I Learned
 
 How to combine commands using a pipe (|)
 
