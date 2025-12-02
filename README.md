@@ -418,5 +418,44 @@ How password clues can be hidden inside non-text files
 Basic idea of analyzing unknown file types in Linux/CTFs
 
 
+## 🔐 Bandit OverTheWire — Level 10 → Level 11
+
+### 🎯 Challenge Summary
+In this level, the password was stored in a file but encoded using **base64**.  
+The task was to decode it and retrieve the next level's password.
+
+---
+
+### 🧠 What I Learned
+- How to identify base64-encoded text  
+- How to decode data using:
+  ```bash
+  base64 -d filename
+  ```
+1.The difference between encoding and encryption
+2.Better command-line navigation and file handling
+
+## 🛠️ Steps I Took
+# Check the file content
+```bash
+cat data.txt
+```
+# Decode the base64 encoded password
+```bash
+base64 -d data.txt
+```
+🔑 The password for next level is
+```bash
+dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
+```
+### 🧠 What I Learned
+- How to recognize base64-encoded text  
+- How to decode base64 using `base64 -d`  
+- The difference between readable text and encoded text  
+- How Linux handles file contents that look random but are actually encoded  
+- Improved confidence working with command-line utilities  
+
+
+
 
 
