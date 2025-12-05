@@ -453,7 +453,58 @@ dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
 - How to decode base64 using `base64 -d`  
 - The difference between readable text and encoded text  
 - How Linux handles file contents that look random but are actually encoded  
-- Improved confidence working with command-line utilities  
+- Improved confidence working with command-line utilities
+- 
+
+
+## Bandit Level 11 → Level 12
+
+### 🔍 Goal  
+The password for the next level is stored in `data.txt` but it is **ROT13 encoded**.  
+ROT13 shifts every letter by 13 positions in the alphabet.
+
+---
+
+### 🧠 What I Had To Do  
+- Read the contents of `data.txt`  
+- Decode the ROT13 text to get the real password  
+
+---
+
+### 🛠️ What I Did  
+
+#### 1️⃣ Listed the file
+```bash
+ls
+```
+2️⃣ Viewed the encoded text
+```bash
+cat data.txt
+```
+It showed something like:
+```bash
+Gur cnffjbeq vf 7k16JArUVv5LxVuJfsSVdbbtaHGlw9D4
+```
+
+3️⃣ Decoded using ROT13 with tr
+```bash
+cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+```
+This command shifts letters by 13 positions and reveals the actual password.
+password for the next level:
+
+```bash
+7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
+```
+
+### 📘 What I Learned (Level 11 → 12)
+
+- Learned about **ROT13 encoding**, a simple letter substitution cipher that shifts alphabet characters by 13 positions.
+- Understood how ROT13 is *reversible* — applying ROT13 twice returns the original text.
+- Used the **`tr` command** in Linux to translate characters from one set to another.
+- Practiced decoding text using:
+  ```bash
+  tr 'A-Za-z' 'N-ZA-Mn-za-m'
 
 
 
