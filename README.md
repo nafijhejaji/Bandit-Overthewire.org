@@ -508,5 +508,81 @@ password for the next level:
 
 
 
+## Bandit Level 12 → Level 13
+
+### 🔍 Goal
+The password for the next level is hidden inside multiple layers of compressed files.
+The file data.txt is a hexdump, which must be reversed into its original binary form and then extracted repeatedly until the final password is found.
+---
+
+ 
+## 🔧 Solution
+1. Convert the hexdump back to binary
+```bash
+xxd -r data.txt data.bin
+```
+
+3. Check the file type
+```bash
+file data.bin
+```
+
+5. Rename the file based on detected type
+
+Examples:
+```bash
+mv data.bin data.gz
+mv data.bin data.bz2
+mv data.bin data.tar
+```
+
+4. Extract the file
+
+Depending on the file type:
+
+gzip:
+
+gunzip data.gz
+
+
+bzip2:
+
+bunzip2 data.bz2
+
+
+tar:
+
+tar -xf data.tar
+
+5. Repeat
+
+Run file again on the new file:
+
+file <newfile>
+
+
+Rename → extract → repeat
+Continue until a plain text file appears.
+
+6. Read the final password
+cat <finalfile>
+
+🔑 Password
+```bash
+F05dwFsc0cbaIiHOh8J2eUks2vdTDwAn
+```
+
+### 📘 What I Learned
+
+Converting hexdumps back to binary using xxd -r
+
+Identifying file formats using file
+
+Extracting different compression formats (gzip, bzip2, tar)
+
+Handling multi-layer compressed files step-by-step
+
+
+
 
 
