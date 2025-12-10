@@ -624,5 +624,23 @@ Understanding Linux file permissions and privilege boundaries
 
 
 
+# Bandit Level 14 → Level 15
+
+## Level Goal
+Send the password from the previous level to a service listening on a port on `localhost` and receive the next level's password in response.
+
+---
+
+## 🔧 Commands Used
+
+### 1. Read the previous level's password
+```bash
+cat /etc/bandit_pass/bandit14
+# Output:
+# MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS
+
+
+
+
 
 
