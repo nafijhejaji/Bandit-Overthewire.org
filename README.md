@@ -640,6 +640,23 @@ cat /etc/bandit_pass/bandit14
 # MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS
 
 
+### Send that password to the local service (netcat) and receive the next password
+```bash
+echo "MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS" | nc localhost 30000
+```
+# Output:
+```bash
+Correct:
+8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
+```
+
+### 📘 What I Learned
+
+How to read protected level files (cat /etc/bandit_pass/...)
+
+How to send data to a local network service using nc (netcat)
+
+How services can accept input over TCP and return results directly in the terminal
 
 
 
