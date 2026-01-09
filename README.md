@@ -661,3 +661,12 @@ How services can accept input over TCP and return results directly in the termin
 
 
 
+# Bandit Level 15 → Level 16
+
+## Level Goal
+
+coming soon.....
+
+
+
+
