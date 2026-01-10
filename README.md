@@ -661,11 +661,50 @@ How services can accept input over TCP and return results directly in the termin
 
 
 
-# Bandit Level 15 → Level 16
+# OverTheWire Bandit: Level 15 → Level 16
 
-## Level Goal
+## 📖 Scenario
+The goal is to retrieve the password for Level 16 by submitting the current password to a service running on **localhost port 30001**. Unlike previous levels, this service is protected by **SSL/TLS encryption**.
 
-coming soon.....
+---
+
+## 🛠️ Execution Log
+
+### 1. Preparation
+I retrieved the password for the current level (`bandit15`) from the standard storage location:
+```bash
+cat /etc/bandit_pass/bandit15
+  Result: 8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
+```
+
+
+### 2. Establishing the Secure Connection
+Because the port uses SSL/TLS, standard tools like nc (Netcat) would fail. I used the OpenSSL toolkit to perform the "secure handshake":
+
+```bash
+openssl s_client -connect localhost:30001
+```
+
+
+### 3. Password Submission
+Once the encrypted tunnel was open, I input the current password:
+
+Plaintext
+```bash
+8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
+```
+
+## Server Response:
+
+# password
+Correct!
+```bash
+kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx
+```
+
+
+
+
 
 
 
