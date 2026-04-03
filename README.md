@@ -615,6 +615,8 @@ then pest the key and save. then use this command to enter into level 14
 ssh -i sshkey.private bandit14@bandit.labs.overthewire.org -p 2220
 ```
 
+this is why we shouldnt store any ssh.private key in our device
+
 ## 📘 What I Learned
 
 How to authenticate using a private SSH key (ssh -i)
