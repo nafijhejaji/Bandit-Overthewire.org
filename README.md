@@ -654,6 +654,8 @@ echo "MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS" | nc localhost 30000
 Correct:
 8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
 ```
+here is the hands on video:
+https://www.facebook.com/share/p/18eM5VoATP/
 
 ### 📘 What I Learned
 
