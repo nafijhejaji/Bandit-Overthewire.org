@@ -673,6 +673,24 @@ How services can accept input over TCP and return results directly in the termin
 ## 📖 Scenario
 The goal is to retrieve the password for Level 16 by submitting the current password to a service running on **localhost port 30001**. Unlike previous levels, this service is protected by **SSL/TLS encryption**.
 
+##most important:
+In Level 14, you used nc (Netcat) to send text over a "raw" connection. It’s like sending a postcard through the mail—anyone who intercepts it can read it.
+
+In Level 15, the server is now using SSL/TLS encryption. If you try to use nc, the connection will fail because the server is expecting an encrypted "handshake" before it accepts any data.
+
+This is where openssl s_client comes in. It’s essentially a specialized version of Netcat that knows how to speak the language of encryption.
+
+Breaking Down the Command
+openssl s_client -connect localhost:30001
+
+openssl: The base tool used for everything related to security and encryption on Linux.
+
+s_client: A specific sub-command (module) that acts as a generic SSL/TLS client. It’s designed to connect to servers that require a secure connection.
+
+-connect: This flag tells the tool which machine and port to talk to.
+
+localhost:30001: The target. Notice that OpenSSL uses a colon (:) between the host and the port, whereas Netcat uses a space.
+
 ---
 
 ## 🛠️ Execution Log
