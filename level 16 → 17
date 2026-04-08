@@ -1,6 +1,66 @@
 April 01 2026
 onnek din gap gelo majhe, bandit ja korechilam maybe shob vule gechi, jahok abar shuru
 
+Bandit Level 16 → Level 17 Walkthrough
+Objective
+The goal was to identify which port between 31000 and 32000 was running a specific service, submit the current level's password to it, and retrieve a private SSH key to log into Level 17.
+
+The Challenge
+Unlike previous levels, we weren't given the exact port. Additionally, the service required SSL/TLS encryption.
+
+Steps Taken
+1. Port Scanning with Nmap
+First, I needed to find which ports were open and which one was running the SSL service. I used nmap to scan the range:
+
+Bash
+nmap -p 31000-32000 localhost
+Discovery: I found several open ports, but I needed the one that speaks SSL and doesn't just "echo" back what I type.
+
+2. Service Version Detection
+To narrow it down, I checked the service versions to see which one was running an SSL-wrapped service:
+
+Bash
+nmap -p 31000-32000 -sV localhost
+Result: Port 31790 was identified as the correct target.
+
+3. Connecting via Ncat (SSL)
+While openssl s_client is a valid tool, ncat proved more reliable for handling the transmission of the password string in this specific environment:
+
+Bash
+ncat --ssl localhost 31790
+Action: Once connected, I pasted the password for Level 16.
+
+Result: The server responded with a RSA Private Key.
+
+4. Private Key Authentication
+I saved the private key to my own system using nano. Because SSH is strict about security, I had to restrict the file permissions:
+
+Bash
+chmod 600 sshkey2.private
+5. Logging into Level 17
+Finally, I used the key to log in:
+
+Bash
+ssh -i sshkey2.private bandit17@localhost -p 2220
+Key Takeaways
+Scanning: nmap is essential for discovery when the target port is unknown.
+
+Tool Versatility: ncat --ssl can sometimes be more user-friendly than openssl s_client for simple data submission over encrypted tunnels.
+
+SSH Hygiene: Private keys must have restricted permissions (600) or the SSH client will reject them for being "too open."
+
+Suggested GitHub Commit Message:
+docs: add Bandit Level 16 to 17 writeup covering nmap and ncat-ssl
+
+Caption for your Social Media/Facebook post:
+Level 16 ➔ 17: The Art of Discovery 🔍
+
+This level was a true test of a pentester's workflow! I had to move from "knowing the target" to "finding the target."
+
+Using Nmap to scan a range of 1,000 ports, I identified the secret encrypted service on port 31790. From there, it was a matter of using Ncat to grab my first RSA Private Key and pivoting into Level 17.
+
+Real-world hacking is 90% reconnaissance and 10% execution. Level 16 proved it! 🛡️💻
+
 
 
 
