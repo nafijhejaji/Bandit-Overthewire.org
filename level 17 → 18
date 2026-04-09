@@ -1,1 +1,60 @@
 
+# Bandit Level 17 → Level 18 Walkthrough
+
+## **Objective**
+Find the unique password for Level 18 by identifying the single line that differs between two files: `passwords.old` and `passwords.new`.
+
+## **Technical Breakdown**
+
+### **1. Accessing the Environment**
+Since Level 16 rewarded us with an RSA Private Key rather than a password, I logged in using the `-i` (identity file) flag:
+```bash
+ssh -i /tmp/bandit17_key bandit17@localhost -p 2220
+```bash
+
+
+2. Analyzing the Challenge
+Upon logging in, I located two files in the home directory:
+
+passwords.old
+
+passwords.new
+
+The goal was to find the one changed line in passwords.new.
+
+3. Using the diff Utility
+To avoid manual inspection, I used the diff command, which compares files line-by-line:
+
+Bash
+diff passwords.old passwords.new
+
+Understanding the Output:
+The output showed two lines with different symbols:
+
+< [password] : The line as it existed in the old file.
+
+> [password] : The line as it exists in the new file.
+
+The line preceded by the > symbol was the password for Level 18.
+
+4. Alternative Method (Sorting/Uniq)
+For practice, I also tested a pipeline method to find the unique entry:
+
+Bash
+cat passwords.old passwords.new | sort | uniq -u
+This combined both files, sorted them, and only displayed the lines that appeared exactly once (the old and new passwords).
+
+Key Takeaways
+Efficiency: Automation tools like diff are essential for log analysis and finding configuration changes.
+
+Data Comparison: Understanding the difference between absolute changes and unique occurrences.
+
+File Integrity: This simulates real-world scenarios where a security auditor must find unauthorized changes in system files.
+
+
+### **Pro-Tip for your Progress:**
+When you try to log into Level 18 with your new password, you might see a message that says **"Byebye!"** and gets kicked out immediately. 
+
+**Don't worry—you didn't do anything wrong!** This is actually a hint for the next level. The user `bandit18` has a modified `.bashrc` or shell setting that prevents a normal login. 
+
+**Would you like a hint on how to "bypass" that "Byebye!" message so you can actually stay in the server?**
