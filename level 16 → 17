@@ -8,6 +8,10 @@ The goal was to identify which port between 31000 and 32000 was running a specif
 The Challenge
 Unlike previous levels, we weren't given the exact port. Additionally, the service required SSL/TLS encryption.
 
+login: ssh bandit16@bandit.labs.overthewire.org -p 2220
+pass: 
+
+
 Steps Taken
 1. Port Scanning with Nmap
 First, I needed to find which ports were open and which one was running the SSL service. I used nmap to scan the range:
