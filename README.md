@@ -727,8 +727,18 @@ Correct!
 kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx
 ```
 
-###i'll upload the next levels using files 
+### i'll upload the next levels using files 
 you'll get them at the begining
+
+
+# if you want to log in to level 15
+just in case you haven't practices for some days and got lost here is a solve:
+
+ssh bandit15@bandit.labs.overthewire.org -p 2220
+pass: 8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
+
+
+
 
 
 
