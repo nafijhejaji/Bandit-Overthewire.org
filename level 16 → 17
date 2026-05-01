@@ -8,8 +8,8 @@ The goal was to identify which port between 31000 and 32000 was running a specif
 The Challenge
 Unlike previous levels, we weren't given the exact port. Additionally, the service required SSL/TLS encryption.
 
-login: ssh bandit16@bandit.labs.overthewire.org -p 2220
-pass: 
+### login: ssh bandit16@bandit.labs.overthewire.org -p 2220
+### pass: kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx
 
 
 Steps Taken
